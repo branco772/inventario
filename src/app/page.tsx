@@ -1,8 +1,9 @@
 import React from 'react'
+import Inicio from '@/components/inicio'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <Inicio/>
   )
 }
 
