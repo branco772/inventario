@@ -2,13 +2,13 @@
 import Link from "next/link";
 import TablaRodamiento from '../../components/tablaRodamiento'
 
-export const feachRodamientos=()=>{
+export const fetchRodamientos=()=>{
     return fetch('http://localhost:3000/api/rodamiento',{ cache: 'no-store'} )
     .then(res=>res.json());
 }
 
 export default async function Rodamientos(){
-    const {rodamientos}= await feachRodamientos();
+    const {rodamientos}= await fetchRodamientos();
     return( 
         <div>
             <div className="m-10 p-5">
