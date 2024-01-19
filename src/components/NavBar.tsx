@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { signIn, useSession, signOut } from 'next-auth/react'
+import Image from 'next/image'
 
 function NavBar() {
   const {data:session}=useSession()
@@ -11,7 +12,7 @@ function NavBar() {
         <div className='flex gap-x-2 items-center'>
           <p>{session.user.name} {session.user.email}</p>
           {session.user.image && (
-          <img className='p-5 w-30 h-30 rounded-full cursor-pointer' src={session.user.image} alt="Perfil" />)}
+          <Image className='p-5 w-30 h-30 rounded-full cursor-pointer' src={session.user.image} alt="Perfil" />)}
           <div>
             <button className='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2' onClick={async()=>{await signOut({callbackUrl:"/"})}}>Salir</button>
           </div>
