@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter,useParams } from "next/navigation";
 
-function page() {
+function Page() {
     const [rodamiento,setRodamiento] = useState(
         {
             interior:"",
@@ -53,4 +53,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

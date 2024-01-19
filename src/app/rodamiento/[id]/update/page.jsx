@@ -51,6 +51,7 @@ function HomePage ({params}){
     }
     useEffect(()=>{
         getRodamiento()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return(
