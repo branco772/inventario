@@ -7,8 +7,8 @@ export const fetchRodamientos=()=>{
     .then(res=>res.json());
 }
 
-export default async function Rodamientos(){
-    const {rodamientos}= await fetchRodamientos();
+function Rodamientos(){
+    const {rodamientos}= fetchRodamientos();
     return( 
         <div>
             <div className="m-10 p-5">
@@ -22,3 +22,4 @@ export default async function Rodamientos(){
     )
 
 }
+export default Rodamientos
