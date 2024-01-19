@@ -107,7 +107,7 @@ export default function TablaRodamiento({ rodamiento }) {
         );
         setRodamientos(updatedRodamientos);
         // Manejar éxito (opcional)
-        alert("Rodamiento eliminado exitosamente");
+        console.log("Rodamiento eliminado exitosamente");
       } else {
         // Manejar error (opcional)
         console.error("Error al eliminar rodamiento");
