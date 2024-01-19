@@ -66,7 +66,7 @@ const RodamientoDeletePage = () => {
   const [error, setError] = useState(null);
 
   const router = useRouter();
-    
+
   const handleSubmit = () => {
     setIsLoading(true);
     setError(null);
@@ -82,7 +82,7 @@ const RodamientoDeletePage = () => {
         setError(null);
 
         // Redireccionar al usuario a la página de rodamientos
-        router.push("/rodamientos");
+        router.push("/rodamiento");
       } else {
         setIsLoading(false);
         setError(
