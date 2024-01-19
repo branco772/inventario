@@ -13,7 +13,7 @@ function HomePage ({params}){
     const router = useRouter();
     //const params = useParams();
 
-    const getCancion = async ()=>{
+    const getRodamiento = async ()=>{
         try {
             const res = await fetch(`/api/rodamiento/${params.id}`);
             const {rodamientos} = await res.json();
@@ -50,7 +50,7 @@ function HomePage ({params}){
         setNewRodamiento({...newRodamiento,[e.target.name]:e.target.value})
     }
     useEffect(()=>{
-        getCancion()
+        getRodamiento()
     },[])
 
     return(
